@@ -1,0 +1,1213 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background-color: #f4f4f4;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Tela inicial */
+.intro {
+    position: relative;
+    height: 100vh;
+    background: url('familia marchese 1962.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #008C45, #fff, #CD212A);
+}
+
+.intro .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.intro .logo-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro .logo {
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+}
+
+.intro .logo:hover {
+    transform: scale(1.1);
+}
+
+.intro .logo-text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+    margin-top: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.intro .subtitle {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro .enter-btn {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #008C45;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.intro .enter-btn:hover {
+    background: #CD212A;
+    transform: scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes navSlide {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Header e Navegação */
+header {
+    background: #008C45;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    background: #008C45;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: navSlide 1s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #008C45;
+    transform: scale(1.05);
+}
+
+/* Seções */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 60px 20px;
+    border-bottom: 5px solid #CD212A;
+}
+
+section h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #008C45;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Nosso Livro */
+.book-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.book-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #CD212A;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.book-link:hover {
+    background: #008C45;
+}
+
+.book-description {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* Galeria */
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #CD212A; /* Igual ao Nosso Livro */
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.gallery-link:hover {
+    background: #008C45;
+}
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.gallery-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-img {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Lista de capítulos */
+.chapter-list-section {
+    padding: 40px 20px;
+}
+
+.chapter-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.chapter-list li {
+    margin: 15px 0;
+}
+
+.chapter-list li a {
+    color: #008C45;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background: #fff;
+    border-left: 5px solid #CD212A;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.chapter-list li a:hover {
+    background: #f0f0f0;
+    transform: translateX(10px);
+}
+
+/* Capítulo individual */
+.chapter {
+    padding: 60px 20px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.chapter-title {
+    font-family: 'Roboto Slab', serif;
+    color: #008C45;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.chapter-content {
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.chapter-content p {
+    margin-bottom: 20px;
+}
+
+/* Book Intro */
+.book-intro {
+    padding: 60px 20px;
+}
+
+.book-intro h1 {
+    font-family: 'Roboto Slab', serif;
+    color: #008C45;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Animação slideIn */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-weight: 300;
+}
+
+/* Árvore Genealógica */
+.tree-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tree-title {
+    font-family: 'Roboto Slab', serif;
+    color: #008C45;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.family-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.generation {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.generation h3 {
+    font-family: 'Roboto Slab', serif;
+    color: #CD212A;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.person {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    border-bottom: 2px solid #008C45;
+    margin: 5px 0;
+}
+
+.tree-note {
+    font-size: 16px;
+    color: #666;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Árvore Genealógica Visual */
+.tree-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tree-title {
+    font-family: 'Roboto Slab', serif;
+    color: #008C45;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.tree-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tree-branch {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 50%;
+}
+
+.tree-level {
+    display: flex;
+    justify-content: center;
+    gap: 200px; /* Espaço entre as linhagens Marchese e Sorgatto */
+    margin-bottom: 20px;
+}
+
+.tree-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.you .circle {
+    background: linear-gradient(135deg, #CD212A, #008C45);
+}
+
+.italian .circle {
+    background: linear-gradient(to right, #009639, #fff, #ce2b37); /* Verde, branco, vermelho (Itália) */
+}
+
+.austrian .circle {
+    background: linear-gradient(to right, #ed1c24, #fff); /* Vermelho, branco (Áustria) */
+}
+
+.spanish .circle {
+    background: linear-gradient(to right, #aa151b, #f1bf00); /* Vermelho, amarelo (Espanha) */
+}
+
+.person-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+.person-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+.tree-connector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+.vertical-line {
+    width: 2px;
+    background: #CD212A;
+}
+
+.vertical-line.top {
+    height: 20px;
+    position: absolute;
+    top: 0;
+}
+
+.vertical-line.top.left {
+    left: calc(25% + 90px); /* Ajustado pra Eugênio/Ângela mais à esquerda */
+}
+
+.vertical-line.top.right {
+    left: calc(75% - 90px); /* Ajustado pro lado Sorgatto */
+}
+
+.vertical-line.bottom {
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.vertical-line.bottom.left {
+    left: calc(25% + 90px);
+}
+
+.vertical-line.bottom.right {
+    left: calc(75% - 90px);
+}
+
+.horizontal-line {
+    width: 120px;
+    height: 2px;
+    background: #CD212A;
+}
+
+.horizontal-line.left {
+    width: 90px; /* Ajustado pra alinhar com Eugênio/Ângela mais à esquerda */
+    height: 2px;
+    background: #CD212A;
+    position: absolute;
+    left: calc(25% + 30px);
+}
+
+.horizontal-line.right {
+    width: 90px; /* Ajustado pro lado Sorgatto */
+    height: 2px;
+    background: #CD212A;
+    position: absolute;
+    left: calc(75% - 120px);
+}
+
+.tree-note {
+    font-size: 16px;
+    color: #666;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Estilo do botão vermelho (igual ao "Nosso Livro") */
+.book-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.book-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #CD212A; /* Vermelho do site */
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-link:hover {
+    background: #b81c22; /* Tom mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+.book-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Estilização do Menu Principal */
+.main-nav {
+    background: linear-gradient(to right, #008C45, #CD212A); /* Gradiente verde pra vermelho */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    animation: slideDown 0.5s ease-out; /* Animação de entrada */
+}
+
+.nav-link {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre ícone e texto */
+}
+
+.nav-link i {
+    font-size: 20px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #008C45;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-item {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background: #CD212A;
+}
+
+/* Animação de entrada do menu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #008C45;
+        padding: 20px 0;
+        animation: none; /* Remove animação no mobile */
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 80%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav-link::after {
+        display: none; /* Remove o sublinhado no mobile */
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+}
+
+/* Estilo do botão vermelho (igual ao "Nosso Livro") */
+.book-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.book-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #CD212A; /* Vermelho do site */
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-link:hover {
+    background: #b81c22; /* Tom mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+.book-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+/* Estilo pra imagens nos círculos da árvore */
+.circle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+/* Árvore Genealógica Visual */
+.tree-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tree-title {
+    font-family: 'Roboto Slab', serif;
+    color: #008C45;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.tree-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tree-branch {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 50%;
+}
+
+.tree-level {
+    display: flex;
+    justify-content: center;
+    gap: 200px; /* Espaço entre as linhagens Marchese e Sorgatto */
+    margin-bottom: 20px;
+}
+
+.tree-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.you .circle {
+    background: linear-gradient(135deg, #CD212A, #008C45);
+}
+
+.italian .circle {
+    background: linear-gradient(to right, #009639, #fff, #ce2b37); /* Verde, branco, vermelho (Itália) */
+}
+
+.austrian .circle {
+    background: linear-gradient(to right, #ed1c24, #fff); /* Vermelho, branco (Áustria) */
+}
+
+.spanish .circle {
+    background: linear-gradient(to right, #aa151b, #f1bf00); /* Vermelho, amarelo (Espanha) */
+}
+
+.person-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+.person-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+.tree-connector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+.vertical-line {
+    width: 2px;
+    background: #CD212A;
+}
+
+.vertical-line.top {
+    height: 20px;
+    position: absolute;
+    top: 0;
+}
+
+.vertical-line.top.left {
+    left: calc(25% + 90px); /* Ajustado pra Eugênio/Ângela mais à esquerda */
+}
+
+.vertical-line.top.right {
+    left: calc(75% - 90px); /* Ajustado pro lado Sorgatto */
+}
+
+.vertical-line.bottom {
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.vertical-line.bottom.left {
+    left: calc(25% + 90px);
+}
+
+.vertical-line.bottom.right {
+    left: calc(75% - 90px);
+}
+
+.horizontal-line {
+    width: 120px;
+    height: 2px;
+    background: #CD212A;
+}
+
+.horizontal-line.left {
+    width: 90px; /* Ajustado pra alinhar com Eugênio/Ângela mais à esquerda */
+    height: 2px;
+    background: #CD212A;
+    position: absolute;
+    left: calc(25% + 30px);
+}
+
+.horizontal-line.right {
+    width: 90px; /* Ajustado pro lado Sorgatto */
+    height: 2px;
+    background: #CD212A;
+    position: absolute;
+    left: calc(75% - 120px);
+}
+
+.tree-note {
+    font-size: 16px;
+    color: #666;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Estilo do Menu Principal (já incluso antes, mas mantenho pra consistência) */
+.main-nav {
+    background: linear-gradient(to right, #008C45, #CD212A);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Árvore Genealógica Horizontal */
+.tree-section {
+    padding: 60px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tree-title {
+    font-family: 'Roboto Slab', serif;
+    color: #008C45;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.tree-wrapper {
+    overflow: hidden;
+    height: 600px;
+    width: 100%;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.tree-container {
+    width: 2000px; /* Ajustado pra caber a árvore horizontal */
+    height: 600px;
+    position: relative;
+    cursor: grab;
+    transform-origin: 0 0;
+    background: #f0f0f0; /* Fundo claro pra destacar as linhas */
+}
+
+.tree-content {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 200px; /* Maior espaçamento entre gerações */
+    padding: 20px;
+    height: 100%;
+}
+
+.tree-generation {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    height: 100%;
+}
+
+.tree-branch {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.tree-node {
+    position: relative;
+}
+
+.node-box {
+    width: 150px;
+    height: 180px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.node-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.person-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.person-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+.italian .node-box {
+    border-color: #009639;
+    background: linear-gradient(to bottom, #009639, #fff, #ce2b37);
+}
+
+.austrian .node-box {
+    border-color: #ed1c24;
+    background: linear-gradient(to bottom, #ed1c24, #fff);
+}
+
+.spanish .node-box {
+    border-color: #aa151b;
+    background: linear-gradient(to bottom, #aa151b, #f1bf00);
+}
+
+.you .node-box {
+    border-color: #CD212A;
+    background: linear-gradient(135deg, #CD212A, #008C45);
+}
+
+.tree-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; /* Evita interferir no arrastar */
+}
+
+.connection-line {
+    stroke: #CD212A;
+    stroke-width: 2;
+    fill: none;
+}
+
+.tree-note {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo do Menu Principal (mantido, só pra contexto) */
+.main-nav {
+    background: linear-gradient(to right, #008C45, #CD212A);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* estilo da galeria de fotos */ 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Navegação de capítulos - Botões modernos */
+.nav-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav-buttons button {
+  font-size: 36px;
+  padding: 15px;
+  margin: 0 20px;
+  cursor: pointer;
+  background: #CD212A;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-buttons button:hover {
+  background: #b81c22;
+  transform: scale(1.1);
+}
+

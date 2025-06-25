@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Família Marchese</title>
+    <link rel="stylesheet" href="marchese1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Família Marchese" class="logo">
+    </header>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="logo.png" alt="Logo Família Marchese" class="nav-logo">
+                    <ul class="nav-menu">
+                <li><a href="menu.html" class="dropdown-item"> Familia Marchese</a></li>
+                <li><a href="arvore.html" class="nav-link"><i class="fas fa-tree"></i> Árvore Genealógica</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"><i class="fas fa-book"></i> Histórias da Família</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#historias" class="dropdown-item">Nossa História</a></li>
+                        <li><a href="#historias" class="dropdown-item">Lendas Familiares</a></li>
+                    </ul>
+                </li>
+                <li><a href="galeria.html" class="nav-link"><i class="fas fa-camera"></i> Galeria de Fotos</a></li>
+                <li><a href="contato.html" class="nav-link"><i class="fas fa-envelope"></i> Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section id="arvore">
+            <h2>Árvore Genealógica</h2>
+            <div class="book-section">
+                <a href="arvore.html" class="book-link">Árvore Genealógica</a>
+                <p class="book-description">Explore a linhagem da Família Marchese</p>
+            </div>
+        </section>
+        <section id="historias">
+            <h2>Histórias da Família</h2>
+            <p>"Minha avó contava como atravessamos o oceano em 1920, com nada além de esperança e uma mala de madeira." - João Marchese</p>
+            <div class="book-section">
+                <a href="nosso-livro.html" class="book-link">Nosso Livro</a>
+                <p class="book-description">A história completa da Família Marchese</p>
+            </div>
+        </section>
+        <section id="fotos">
+            <h2>Galeria de Fotos</h2>
+            <div class="gallery">
+                <a href="galeria.html" class="gallery-link" onclick="openGallery()">Galeria de Fotos</a>
+            </div>
+            <div id="gallery-modal" class="gallery-modal">
+                <span class="close" onclick="closeGallery()"></span>
+                <div class="gallery-content">
+                    <img src="Familia Marchese 1962.png" alt="Foto Antiga da Família" class="modal-img">
+                    <img src="Familia Marchese 2024.jpg" alt="Reunião Recente" class="modal-img">
+                </div>
+            </div>
+        </section>
+        <section id="cidadania">
+            <h2>Cidadania Italiana</h2>
+            <p>Descubra como resgatamos nossa cidadania italiana em 2015, conectando-nos às nossas raízes em Piemonte.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato com a família Marchese: <a href="mailto:igor@example.com">igor@example.com</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>Família Marchese © 2025 - Todos os direitos reservados - Igor Costa Marchese</p>
+    </footer>
+</body>
+</html>

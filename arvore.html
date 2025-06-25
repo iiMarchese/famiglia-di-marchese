@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Família Marchese - Árvore Genealógica</title>
+  <style>
+    /*... (mesmo estilo do código anterior) ...*/
+  </style>
+</head>
+<body>
+
+  <h1>Família Marchese 🌿</h1>
+
+  <div class="tree">
+    <ul id="family-tree">
+      <!-- A árvore vai ser preenchida aqui via JavaScript -->
+    </ul>
+  </div>
+
+  <button class="btn-add" id="add-button">+ Adicionar Membro</button>
+
+  <div class="input-name" id="input-section">
+    <input type="text" id="new-member-name" placeholder="Digite o nome do novo membro">
+    <button id="submit-name" class="btn-add">Adicionar</button>
+  </div>
+
+  <script>
+    // Função para carregar a árvore de membros do localStorage
+    function loadTree() {
+      const savedMembers = JSON.parse(localStorage.getItem('familyTree'));
+      const familyTree = document.getElementById('family-tree');
+      if (savedMembers && savedMembers.length > 0) {
+        savedMembers.forEach(member => {
+          let newMember = document.createElement('li');
+          newMember.innerHTML = `<div>👤 ${member}</div>`;
+          familyTree.appendChild(newMember);
+        });
+      } else {
+        // Adicionar membro principal se não houver dados salvos
+        let newMember = document.createElement('li');
+        newMember.innerHTML = `<div>👤 Angelo Marchese (bisavô)</div>`;
+        familyTree.appendChild(newMember);
+      }
+    }
+
+    // Carregar a árvore ao iniciar a página
+    loadTree();
+
+    // Adicionar novo membro
+    document.getElementById('add-button').addEventListener('click', function() {
+      document.getElementById('input-section').style.display = 'block';
+    });
+
+    document.getElementById('submit-name').addEventListener('click', function() {
+      var name = document.getElementById('new-member-name').value;
+      if (name) {
+        var familyTree = document.getElementById('family-tree');
+        var newMember = document.createElement('li');
+        newMember.innerHTML = `<div>👤 ${name}</div>`;
+        familyTree.appendChild(newMember);
+
+        // Salvar o novo membro no localStorage
+        let savedMembers = JSON.parse(localStorage.getItem('familyTree')) || [];
+        savedMembers.push(name);
+        localStorage.setItem('familyTree', JSON.stringify(savedMembers));
+
+        document.getElementById('new-member-name').value = '';  // Clear input
+        document.getElementById('input-section').style.display = 'none';  // Hide input field
+      } else {
+        alert("Por favor, digite um nome.");
+      }
+    });
+  </script>
+
+</body>
+</html>
